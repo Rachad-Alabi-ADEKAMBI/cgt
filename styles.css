@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  height: 100px;
+  background-color: #09243c;
+  display: flex;
+  flex-direction: row;
+}
+
+.header__details {
+  background-color: rgba(2, 14, 36, 0.9);
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+}
+
+.header__details__logo {
+  width: 77px;
+  margin-left: 10px;
+  background-color: red;
+}
+
+.header__details__infos {
+  color: #ffcf03;
+  margin: 40px auto auto 0;
+  font-size: 0.8em;
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 50px;
+}
+
+.header__menu a {
+  color: white;
+  margin: auto 50px auto auto;
+}
+
+.header__user {
+  margin: auto 70px;
+  width: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1f;
+  grid-template-rows: 1fr 1r;
+  grid-template-areas: "pic  infos" "pic title";
+}
+
+.header__user .infos {
+  color: white;
+}
+
+.header__user .title {
+  color: yellow;
+}
+
+.header__support-details {
+  width: 200px;
+  background-color: #ffcf03;
+  border-radius: 30px;
+  margin: auto 50px auto auto;
+  padding: 9.3px 25.5px 7.5px 13.8px;
+  border-radius: 25px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container .menu {
+  width: 350px;
+  height: 600px;
+  background-color: #09243c;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.container .menu__link {
+  margin: 20px auto 0 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.container .menu__link .bar {
+  width: 10px;
+  background-color: #ffcf03;
+  height: 30px;
+}
+
+.container .menu__link .title {
+  color: white;
+  margin: auto;
+}
+
+.container .menu a:hover .bar {
+  background-color: purple;
+}
+
+.container .menu a:hover .title {
+  font-weight: bold;
+  color: #ffcf03;
+}
+
+.container .menu .pin-menu {
+  color: white;
+  margin: auto auto 30px auto;
+}
+
+.container .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto 30px;
+}
+
+.container .main__menu {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: fit-content;
+  margin: 30px auto 50px 0;
+}
+
+.container .main__menu a {
+  margin: auto 10px auto auto;
+}
+
+.container .main__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .main__section__type {
+  font-weight: bold;
+}

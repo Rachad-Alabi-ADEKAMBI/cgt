@@ -1,0 +1,153 @@
+$brand-yellow: #ffcf03;
+$black-blue: #09243c;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  height: 100px;
+  background-color: $black-blue;
+  display: flex;
+  flex-direction: row;
+
+  &__details {
+    background-color: rgba(2, 14, 36, 0.9);
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+
+    &__logo {
+      width: 77px;
+      margin-left: 10px;
+      background-color: red;
+    }
+
+    &__infos {
+      color: $brand-yellow;
+      margin: 40px auto auto 0;
+      font-size: 0.8em;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 50px;
+    a {
+      color: white;
+      margin: auto 50px auto auto;
+    }
+  }
+
+  &__user {
+    margin: auto 70px;
+    width: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1f;
+    grid-template-rows: 1fr 1r;
+    grid-template-areas:
+      "pic  infos"
+      "pic title";
+
+    .infos {
+      color: white;
+    }
+
+    .title {
+      color: yellow;
+    }
+  }
+
+  &__support-details {
+    width: 200px;
+    background-color: $brand-yellow;
+    border-radius: 30px;
+    margin: auto 50px auto auto;
+    padding: 9.3px 25.5px 7.5px 13.8px;
+    border-radius: 25px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+  .menu {
+    width: 350px;
+    height: 600px;
+    background-color: $black-blue;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    &__link {
+      margin: 20px auto 0 0;
+      display: flex;
+      flex-direction: row;
+
+      .bar {
+        width: 10px;
+        background-color: $brand-yellow;
+        height: 30px;
+      }
+
+      .title {
+        color: white;
+        margin: auto;
+      }
+    }
+
+    a:hover {
+      .bar {
+        background-color: purple;
+      }
+
+      .title {
+        font-weight: bold;
+        color: $brand-yellow;
+      }
+    }
+
+    .pin-menu {
+      color: white;
+      margin: auto auto 30px auto;
+    }
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto 30px;
+
+    &__menu {
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      width: fit-content;
+      margin: 30px auto 50px 0;
+
+      a {
+        margin: auto 10px auto auto;
+      }
+    }
+
+    &__section {
+      display: flex;
+      flex-direction: column;
+
+      &__type {
+        font-weight: bold;
+      }
+    }
+  }
+}
