@@ -53,67 +53,55 @@
           </div>
       </div>
     </header>
-
     <div class="container">
     <div class="menu">
         <a href="#" class="menu__link">
           <div class="menu__link bar"></div>
-          <div class="menu__link icon">
-            <i></i>
-          </div>
-          <div class="menu__link title">
+            <img src="icons/personal-info.svg" class="menu__link icon">
+          <p class="menu__link title">
             INFORMATIONS PERSONNELLES
-          </div>
+          </p>
         </a>
 
        <a href="#" class="menu__link">
           <div class="menu__link bar"></div>
-          <div class="menu__link icon">
-            <i></i>
-          </div>
-          <div class="menu__link title">
+            <img src="icons/family-members-selected.svg" class="menu__link icon">
+          <p class="menu__link title">
             AYANTS-DROITS
-          </div>
+          </p>
         </a>
 
         <a href="#" class="menu__link">
           <div class="menu__link bar"></div>
-          <div class="menu__link icon">
-            <i></i>
-          </div>
-          <div class="menu__link title">
-            RÉSERVATIONS
-          </div>
+            <img src="icons/reservations.svg" class="menu__link icon">
+          <p class="menu__link title">
+            RESERVATIONS
+          </p>
         </a>
 
         <a href="#" class="menu__link">
           <div class="menu__link bar"></div>
-          <div class="menu__link icon">
-            <i></i>
-          </div>
-          <div class="menu__link title">
-            OFFRES SAUVEGARDÉES
-          </div>
+            <img src="icons/star.svg" class="menu__link icon">
+          <p class="menu__link title">
+            OFFRES SAUVEGARDEES
+          </p>
         </a>
 
-        <a href="#" class="menu__link">
+       <a href="#" class="menu__link">
           <div class="menu__link bar"></div>
-          <div class="menu__link icon">
-            <i></i>
-          </div>
-          <div class="menu__link title">
-            RECHERCHES PRÉCÉDENTES
-          </div>
+            <img src="icons/saved-search.svg" class="menu__link icon">
+          <p class="menu__link title">
+            RECHERCHES PRECEDENTES
+          </p>
         </a>
 
-        <a href="#" class="menu pin-menu title">
+       <a href="#" class=" pin-menu">
           MOT DE PASSE
         </a>
 
-        <a href="#" class="menu pin-menu title">
+        <a href="#" class="pin-menu">
           DECONNEXION
         </a>
-          
     </div>
 
     <main class="main">
@@ -131,73 +119,75 @@
             </a>
         </div>
 
-        <h1 class="main__title">Ayants-droits</h1>
+        <h2 class="main__title">Ayants-droits</h2>
 
-        <section class="main__section">
-
-          <h2 class="main__section__ type">
+        <h3 class="main__section-type">
             CONJOINT.E
-        </h2>
-
-        <div class="main__section__infos"></div>
-
-          <p class="main__section__infos name"> <i></i>Martin Philippe</p>
-
-          <div class="main__section__infos edit"><i></i>EDITER</div>
-          
-          <p class="main__section__infos birth-date"><i></i>12 Dec 1986</p>
-
-          <p class="main__section__infos telephone"> <i</i>+7 983 152 72 77 "></div>
-
-          <p class="main__section__infos adress">France, Paris, 24 Rue du Commandant Guilbaud,77003></p>
-        </section>
-
-        <h3>ENFANTS</h3>
+        </h3>
         <section class="main__section">
-          <div class="main__section__name"> <i></i>Elise</div>
+          <div class="main__section__name">Martin Philippe</div>
 
-          <div class="main__section__edit"><i></i>EDITER</div>
+          <div class="main__section__edit"><img src="icons/edit.svg"> EDITER</div>
           
-          <div class="main__section__date"><i></i>17 Oct 2009</div>
+          <p class="main__section__birth-date"><img src="icons/calendar-yellow.svg">12 Dec 1986</p>
 
-          <div class="main__section__adress">France, Paris, 24 Rue du Commandant Guilbaud,77003</div>
+          <div class="main__section__phone"> <img src="icons/phone-yellow.svg"> +7 983 152 72 77 </div>
+
+          <div class="main__section__adress"><img src="icons/house-yellow.svg"> France, Paris, 24 Rue du Commandant Guilbaud,77003</div>
+        </section>
+
+        <h3 class="main__section-type">ENFANTS</h3>
+        
+        <section class="main__section">
+          <p class="main__section__name">ELise</p>
+
+          <div class="main__section__edit edit"><img src="icons/edit.svg"> EDITER</div>
+          
+          <p class="main__section__birth-date"><img src="icons/calendar-yellow.svg">17 Oct 2009</p>
+
+          <p class="main__section__adress"><img src="icons/house-yellow.svg"> France, Paris, 24 Rue du Commandant Guilbaud,77003</p>
         </section>
 
         <section class="main__section">
-          <div class="main__section__name"> <i></i>Robert Jr. Harris</div>
+          <div class="main__section__name">Robert Jr. Harris</div>
 
-          <div class="main__section__edit"><i></i>EDITER</div>
+          <p class="main__section__edit edit"><img src="icons/edit.svg"> EDITER</p>
           
-          <div class="main__section__date"><i></i>30 Jan 2015</div>
+          <p class="main__section__birth-date"><img src="icons/calendar-yellow.svg">30 Jan 2015</p>
 
-          <div class="main__section__adress">France, Paris, 24 Rue du Commandant Guilbaud,77003</div>
+          <div class="main__section__adress"><img src="icons/house-yellow.svg"> France, Paris, 24 Rue du Commandant Guilbaud,77003</div>
         </section>
 
-        <div class="main__add-btn">
-            <i></i>
-            AJOUTER UNE PERSONNE
+        <div class="main__edit edit">
+            <img src="icons/plus_3.svg">
+            <p>AJOUTER UNE PERSONNE</p>
         </div>
 
-        <form>
-            <label for="first-name">Prénom</label>
-            <input type="text" placeholder="Santos">
+        <form class="form">
+          <p class="form__text">AJOUTER UN MEMBRE DE LA FAMILLE</p>
 
-            <label for="last-name">Nom</label>
-            <input type="text" placeholder="Anna"><br>
+            <label class="form__first-name" for="first-name">Prénom<br>
+            <input type="text" placeholder="Santos"></label>
 
-                <input type="checkbox" name="homme" id="homme"checked><label for="homme">Homme</label>
+            <label class="form__last-name" for="last-name">Nom<br>
+            <input type="text" placeholder="Anna"></label>
+
+            <label class="form__gender" for="gender">
+                <input type="checkbox" name="homme" id="homme"><label for="homme">Homme</label>
                 <input type="checkbox" name="femme" id="femme"><label for="femme">Femme</label><br>
+            </label>
 
-            <label for="relative">Filiation</label><br>
+            <label class="form__relative-type" for="relative-type">Filiation<br>
             <select name="relative" id="relative">
                 <option value="Enfant">Enfant</option>
                 <option value="Autres">Autres</option>
-            </select><br>
+            </select>
+            </label>
 
-            <label for="birth-date">Date de naissance</label><br>
-            <input type="date"><br>
+            <label class="form__birth-date" for="birth-date">Date de naissance<br>
+            <input type="date"></label>
 
-            <label for="postal-adress">Adresse postale</label><br>
+            <label class="form__country" for="country">Adresse postale<br>
             <select name="pays">
 <option value="Afghanistan">Afghanistan</option>
 <option value="Afrique_du_Sud">Afrique du Sud</option>
@@ -393,20 +383,29 @@
 <option value="Zambie">Zambie</option>
 <option value="Zimbabwe">Zimbabwe</option>
             </select>
-            <input type="text" placeholder="Code Postal"><br>
+            </label>
 
-            <label for="adress"></label><br>
-            <i></i>
-            <input type="text" placeholder="Adresse">
-            <input type="text" placeholder="Ville"><br>
+            <label clas="form__zip-code" for="zip-code"><br>
+            <input type="text" placeholder="Code Postal"></label>
 
-            <label for="email">Email personnel</label><br>
+            <label class="form__adress" for="adress">
+              <input type="text" placeholder="Adresse"> 
+            </label>
+
+            <label class="form__city" for="form">
+            <input type="text" placeholder="Ville">
+            </label>
+
+            <label class="form__email" for="email">Email personnel<br>
             <input type="email">
+            </label>
 
-            <label for="tel">Numero de téléphone*
-            <input type="tel"></label><br>
+            <label class="form__telephone" for="telephone">Numero de téléphone*<br>
+            <input type="tel"></label>
 
+            <label class="form__submit-btn" for="submit-btn">
             <input type="submit" value="AJOUTER UNE PERSONNE">
+            </label>
         </form>
     </main>
     </div>
