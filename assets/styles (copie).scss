@@ -1,0 +1,737 @@
+/*variables*/
+$brand-yellow: #ffcf03;
+$black-blue: #09243c;
+$color-grey: rgba(0, 0, 0, 0.3);
+
+/*fonts Athelas*/
+@import url("http://fonts.cdnfonts.com/css/athelas");
+
+/*main styles*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", arial;
+  font-style: normal;
+}
+
+body {
+  background-color: #f6f6f5;
+  min-width: 1280px;
+  max-width: 1439px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+input {
+  height: 50px;
+}
+
+ul li {
+  list-style: none;
+}
+
+/*header*/
+.header {
+  width: 100vw;
+  height: 100px;
+  background-color: $black-blue;
+  display: flex;
+  flex-direction: row;
+
+  &__details {
+    background-color: rgba(2, 14, 36, 0.9);
+    display: flex;
+    flex-direction: row;
+    width: 295px;
+
+    &__logo {
+      width: 77px;
+      margin-left: 30px;
+      background-color: red;
+    }
+
+    &__infos {
+      color: $brand-yellow;
+      font-weight: bold;
+      font-size: 1em;
+      margin: 26px 0 9px 11px;
+      width: 170px;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 30px;
+
+    li {
+      color: white;
+      margin: auto 50px auto auto;
+      height: 20px;
+      font-weight: bold;
+      font-family: "Roboto";
+      display: inline;
+
+      a {
+        display: table;
+
+        p {
+          display: table-cell;
+          vertical-align: middle;
+          margin-right: 5px;
+          height: 20px;
+        }
+        img {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  &__user {
+    margin: auto 30px auto auto;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin: auto 10px auto auto;
+    }
+
+    .user-infos {
+      display: flex;
+      flex-direction: column;
+
+      .infos {
+        color: white;
+        width: 100%;
+        font-weight: normal;
+        font-size: normal;
+      }
+
+      .title {
+        color: #c9a300;
+        font-family: "Roboto Regular", arial;
+        height: 15px;
+      }
+    }
+  }
+
+  &__support-details {
+    width: 165px;
+    background-color: $brand-yellow;
+    border-radius: 30px;
+    margin: auto 30px auto 30px;
+    padding: 9.3px 25.5px 7.5px 13.8px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    p {
+      font-family: "Roboto Regular", arial;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+  /*menu*/
+  .aside {
+    display: block;
+    background-color: $black-blue;
+    width: 295px;
+    height: 800px;
+    position: relative;
+
+    &__up-menu {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      margin: 22px auto;
+
+      &__link {
+        margin: auto auto 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        height: 60px;
+
+        a {
+          margin: 15px auto 0 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: auto;
+
+          .bar {
+            width: 5px;
+            background-color: $black-blue;
+            height: 50px;
+            margin-right: 20px;
+          }
+
+          .bar-active {
+            background-color: $brand-yellow;
+            width: 5px;
+            height: 50px;
+            margin-right: 20px;
+          }
+
+          .active-link {
+            color: $brand-yellow;
+          }
+
+          img {
+            width: 30px;
+            height: 30px;
+            color: white;
+            margin-right: 20px;
+          }
+
+          p {
+            color: white;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+
+    .bottom-menu {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      &__link {
+        margin-left: 20px;
+        a {
+          margin: auto 25px auto auto;
+          color: white;
+        }
+      }
+    }
+  }
+
+  /*main*/
+  .main {
+    display: block;
+    margin: 40px auto auto 30px;
+
+    .menu-mobile {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        display: none;
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto auto 0;
+        font-size: 12px;
+
+        li a {
+          margin: 0 5px auto 0;
+          color: rgba(9, 36, 60, 0.5);
+          font-family: "Roboto Regular";
+          display: table;
+
+          img {
+            margin: auto 0 auto auto;
+            display: table-cell;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      h2 {
+        font-family: "Athelas", sans-serif;
+        margin: 40px auto auto 0;
+        font-stretch: normal;
+        height: 56px;
+        font-size: 50px;
+        font-weight: normal;
+        font-style: italic;
+        line-height: normal;
+        letter-spacing: 1px;
+      }
+    }
+
+    &__section-type {
+      margin: 30px auto 10px 0;
+      width: 59px;
+      height: 19px;
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.53px;
+      width: 59px;
+    }
+
+    /*section*/
+    &__section {
+      margin: 0 auto auto 10px;
+      width: 920px;
+      height: 100px;
+      box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+      display: grid;
+      grid-template-columns: 0.25fr 0.3fr 0.5fr 0.4fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "relative-name relative-name relative-name edit"
+        "birth-date phone adress adress";
+
+      &__name {
+        grid-area: relative-name;
+        margin: auto 10px;
+        width: 124px;
+        height: 23px;
+        font-family: "Athelas";
+        font-size: 19px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: italic;
+        line-height: normal;
+        letter-spacing: 0.16px;
+        color: #000000;
+      }
+
+      &__edit {
+        grid-area: edit;
+        margin: auto 10px auto auto;
+        background-color: white;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        cursor: pointer;
+
+        img {
+          margin-right: 5px;
+        }
+
+        p {
+          font-family: "Bebas Neue";
+        }
+      }
+
+      &__birth-date {
+        grid-area: birth-date;
+        display: table;
+        margin: auto auto 0 0;
+
+        img {
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+        p {
+          display: table-cell;
+          vertical-align: middle;
+          font-family: "Roboto Regular";
+        }
+      }
+
+      &__phone {
+        grid-area: phone;
+        display: table;
+        margin: auto auto 0 auto;
+
+        img {
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+        p {
+          display: table-cell;
+          vertical-align: middle;
+          font-family: "Roboto Regular";
+        }
+      }
+
+      &__adress {
+        grid-area: adress;
+        display: table;
+        margin: auto auto 0 0;
+
+        img {
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+        p {
+          display: table-cell;
+          vertical-align: middle;
+          font-family: "Roboto Regular";
+        }
+      }
+    }
+
+    &__edit {
+      margin: 30px auto 10px 10px;
+      display: table;
+      cursor: pointer;
+
+      img {
+        display: table-cell;
+        vertical-align: middle;
+        margin-right: 7px;
+      }
+
+      p {
+        display: table-cell;
+        vertical-align: middle;
+        font-weight: normal;
+        font-family: "Bebas Neue";
+      }
+    }
+
+    /*form*/
+    .form {
+      margin: 100px auto auto 0;
+      width: 700px;
+      font-family: "Roboto";
+      color: $color-grey;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: yellowgreen;
+
+      &__text {
+        grid-area: text;
+        font-weight: bold;
+        color: black;
+        font-family: "Bebas Neue";
+        margin: auto auto 50px 0;
+      }
+
+      &__name {
+        display: flex;
+        flex-direction: row;
+
+        .first-name {
+          input {
+            width: 330px;
+            margin: auto 21px auto auto;
+          }
+        }
+
+        .last-name {
+          input {
+            width: 330px;
+            margin: auto 0;
+          }
+        }
+      }
+
+      &__gender {
+        grid-area: gender;
+      }
+
+      &__relative-type {
+        margin: 20px auto auto 0;
+        select {
+          width: 300px;
+          height: 50px;
+          background-color: white;
+        }
+      }
+
+      &__birth-date {
+        margin: 20px auto auto 0;
+        input {
+          width: 300px;
+        }
+      }
+
+      &__country {
+        display: table;
+        background-color: purple;
+
+        .country {
+          select {
+            height: 50px;
+            background-color: white;
+          }
+        }
+        .zip-code {
+          input {
+            width: 150px;
+          }
+        }
+      }
+
+      &__adress {
+        display: table;
+
+        .adress {
+          position: relative;
+          margin: 20px 20px auto 0;
+          display: table-cell;
+          vertical-align: middle;
+
+          input {
+            width: 560px;
+            padding-left: 30px;
+
+            img {
+              position: absolute;
+              left: 0;
+              top: 10px;
+            }
+          }
+
+          .city {
+            input {
+              width: 100px;
+              display: table-cell;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+      &__contact {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+        .email {
+          margin: auto 21px auto auto;
+          input {
+            width: 330px;
+          }
+
+          img {
+            position: absolute;
+            left: 5px;
+            top: 15px;
+          }
+        }
+
+        .telephone {
+          position: relative;
+          margin: auto 0;
+          input {
+            width: 330px;
+          }
+
+          img {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+          }
+        }
+      }
+
+      &__submit-btn {
+        input {
+          background-color: yellow;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  /*media queries for tablets 1024px */
+  @media screen and (max-width: 1024px) {
+    .header {
+      &__details {
+        width: 300px;
+
+        &__infos {
+          margin: auto;
+        }
+      }
+
+      &__menu {
+        margin: auto;
+
+        a {
+          margin: auto 20px auto auto;
+        }
+      }
+
+      &__support-details {
+        display: none;
+      }
+
+      &__user {
+        img {
+          height: 60px;
+          width: 60px;
+        }
+      }
+    }
+
+    .container {
+      .menu {
+        width: 300px;
+      }
+      .main {
+        &__section {
+          margin: 0;
+          height: 80px;
+          width: 60vw;
+          display: flex;
+          flex-direction: row;
+
+          &__name {
+            margin-left: 10px;
+          }
+          &__edit {
+            margin-right: 10px;
+          }
+
+          &__birth-date {
+            display: none;
+          }
+
+          &__phone {
+            display: none;
+          }
+
+          &__adress {
+            display: none;
+          }
+        }
+
+        .main_form {
+          .form {
+            &__adress {
+              input {
+                width: 250px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*hamburger menu media queries*/
+  @media screen and (min-width: 769px) {
+    .ham_icon {
+      display: none;
+    }
+  }
+
+  /*media queries for tablets 768px*/
+  @media screen and (max-width: 768px) {
+    .header {
+      &__menu {
+        display: none;
+      }
+
+      &__user {
+        .infos,
+        .title {
+          display: none;
+        }
+      }
+    }
+
+    .container {
+      .menu {
+        display: none;
+      }
+
+      .main {
+        .menu-mobile {
+          display: table;
+          width: 95vw;
+          margin: auto 10px auto auto;
+
+          .ham_icon {
+            margin: 20px auto auto 10px;
+            display: table-cell;
+            vertical-align: middle;
+            cursor: pointer;
+          }
+
+          .main__menu {
+            display: none;
+            flex-direction: column;
+            width: auto;
+          }
+
+          h2 {
+            margin: 20px auto auto 10px;
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 2em;
+          }
+        }
+
+        &__section {
+          width: 90vw;
+        }
+
+        .main_form {
+          display: none;
+          margin: 0;
+          .form {
+            &__first-name {
+              input {
+                width: 250px;
+              }
+            }
+
+            &__last-name {
+              input {
+                width: 250px;
+              }
+            }
+
+            &__relative-type {
+              select {
+                width: 150px;
+              }
+            }
+
+            &__birth-date {
+              input {
+                width: 150px;
+              }
+            }
+
+            &__country {
+              select {
+                width: 150px;
+              }
+            }
+
+            &__zip-code {
+              input {
+                width: 150px;
+              }
+            }
+
+            &__adress {
+              input {
+                width: 200px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

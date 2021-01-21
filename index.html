@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fr.allfont.net/allfont.css?fonts=bebas-neue" rel="stylesheet" type="text/css" /> 
     <link href="https://fr.allfont.net/allfont.css?fonts=roboto-regular" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.cdnfonts.com/css/athelas" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.min.css" />
     <script
       src="https://kit.fontawesome.com/b14771b76e.js"
@@ -30,20 +31,19 @@
         </p>
       </div>
 
-      <div class="header__menu">
-        <a href="#"> VACANCES > </a>
-
-        <a href="#"> CULTURE > </a>
-
-        <a href="#"> SPORTS > </a>
-
-        <a href="#"> LOISIRS > </a>
-      </div>
+      <ul class="header__menu">
+          <li class="header__menu__link"> <a href="#"> <p>VACANCES </p><img src="assets/icons/right.svg"></a></li>
+          <li class="header__menu__link"> <a href="#"> <p>CULTURE</p> <img src="assets/icons/right.svg"></a></li>
+          <li class="header__menu__link"> <a href="#"> <p>SPORTS </p><img src="assets/icons/right.svg"> </a></li>
+          <li class="header__menu__link"> <a href="#"> <p>LOISIRS</p> <img src="assets/icons/right.svg"> </a></li>
+      </ul>
 
       <div class="header__user">
           <img src="https://cdn.pixabay.com/photo/2015/07/09/00/29/woman-837156_960_720.jpg" />
-        <p class="infos">ANNE SANTOS</p>
-        <p class="title">User</p>
+          <div class="user-infos">
+            <p class="infos">ANNE SANTOS</p>
+            <p class="title">User</p>
+          </div>
       </div>
 
         <div class="header__support-details">
@@ -54,81 +54,100 @@
       </div>
     </header>
     <!--header end -->
+
     <div class="container">
 
-      <!--menu-->
-    <div class="menu">
-        <a href="#" class="menu__link">
-          <div class="menu__link bar"></div>
-            <img src="assets/icons/personal-info.svg" class="menu__link icon">
-          <p class="menu__link title">
-            INFORMATIONS PERSONNELLES
-          </p>
-        </a>
+    <!--aside-menu-->
+    <aside class="aside">
+      <ul class="aside__up-menu">
+        <li class="aside__up-menu__link">
+          <a href="#">
+            <div class="bar"></div>
+            <img src="assets/icons/personal-info.svg">
+            <p>
+              INFORMATIONS PERSONNELLES
+            </p>
+          </a>
+        </li>
 
-       <a href="#" class="menu__link">
-          <div class="menu__link bar"></div>
-            <img src="assets/icons/family-members-selected.svg" class="menu__link icon">
-          <p class="menu__link title">
-            AYANTS-DROITS
-          </p>
-        </a>
+        <li class="aside__up-menu__link">
+          <a href="#" class="menu__link">
+            <div class="bar-active"></div>
+            <img src="assets/icons/family-members-selected.svg">
+            <p class="active-link">
+              AYANTS-DROITS
+            </p>
+          </a>
+        </li>
 
-        <a href="#" class="menu__link">
-          <div class="menu__link bar"></div>
-            <img src="assets/icons/reservations.svg" class="menu__link icon">
-          <p class="menu__link title">
-            RESERVATIONS
-          </p>
-        </a>
+        <li class="aside__up-menu__link">
+          <a href="#" class="menu__link">
+            <div class="bar"></div>
+            <img src="assets/icons/reservations2.svg">
+            <p>
+              RESERVATIONS
+            </p>
+          </a>
+        </li>
 
-        <a href="#" class="menu__link">
-          <div class="menu__link bar"></div>
-            <img src="assets/icons/star.svg" class="menu__link icon">
-          <p class="menu__link title">
-            OFFRES SAUVEGARDEES
-          </p>
-        </a>
+        <li class="aside__up-menu__link">
+          <a href="#" class="menu__link">
+            <div class="bar"></div>
+            <img src="assets/icons/star.svg">
+            <p>
+               OFFRES SAUVEGARDEES
+            </p>
+          </a>
+        </li>
 
-       <a href="#" class="menu__link">
-          <div class="menu__link bar"></div>
-            <img src="assets/icons/saved-search.svg" class="menu__link icon">
-          <p class="menu__link title">
-            RECHERCHES PRECEDENTES
-          </p>
-        </a>
+         <li class="aside__up-menu__link">
+          <a href="#" class="menu__link">
+            <div class="bar"></div>
+            <img src="assets/icons/saved-search.svg">
+            <p>
+              RECHERCHES PRECEDENTES
+            </p>
+          </a>
+        </li>
+      </ul>
 
-      
-         <a href="#" class="pin-menu">
-          <p>MOT DE PASSE</p>
-        </a>
+      <ul class="bottom-menu">
+         <li class="bottom-menu__link">
+            <a href="#">
+            MOT DE PASSE
+          </a>
+        </li>
 
-        <a href="#" class="pin-menu">
-          <p>DECONNEXION</p>
-        </a>
-    </div>
-    <!--menu end-->
+        <li class="bottom-menu__link">
+            <a href="#">
+            DECONNEXION
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <!--aside-menu end-->
 
     <main class="main">
       <!--menu mobile-->
-        <div class="menu-mobile">
-        <div class="ham_icon" id="ham_icon">
-           <p>&#9776;</p>
-        </div>
+      <div class="menu-mobile">
+        <img src="" class="menu__mobile__icon">
 
-        <div class="main__menu" id="main__menu">
-            <a href="#">
-                Accueil > 
+        <ul class="main__menu" id="main__menu">
+            <li><a href="#" class="main__menu__link" >
+                Accueil <img src="assets/icons/right-small.svg"> 
             </a>
+            </li>
 
-            <a href="#">
-                Compte > 
+            <li><a href="#" class="main__menu__link" >
+                Compte <img src="assets/icons/right-small.svg"> 
             </a>
+            </li>
 
-            <a href="#">
-                Ayants-droits 
+            <li><a href="#" class="main__menu__link" >
+                Ayants-droits  
             </a>
-        </div>
+            </li>
+        </ul>
 
         <h2 class="main__title">Ayants-droits</h2>
       </div>
@@ -162,7 +181,7 @@
           <div class="main__section__adress"><img src="assets/icons/house-yellow.svg"><p>France, Paris, 24 Rue du Commandant Guilbaud,77003</p></div>
         </section>
 
-        <div class="main__section">
+        <section class="main__section">
           <div class="main__section__name">Robert Jr. Harris</div>
 
           <button class="main__section__edit edit_btn"><img src="assets/icons/edit.svg"> EDITER</button>
@@ -170,24 +189,25 @@
           <div class="main__section__birth-date"><img src="assets/icons/calendar-yellow.svg"><p>30 Jan 2015</p></div>
 
           <div class="main__section__adress"><img src="assets/icons/house-yellow.svg"><p>France, Paris, 24 Rue du Commandant Guilbaud,77003</p></div>
-        </div>
+        </section>
         
-        <div class="main__edit edit_btn">
+        <div class="main__edit edit_btn" onclick="document.getElementById('form').style.display='block';">
             <img src="assets/icons/plus_3.svg">
             <p>AJOUTER UNE PERSONNE</p>
         </div>
         <!--section end -->
 
         <!--form -->
-        <div class="main_form" id="main_form">
-          <form class="form" >
+          <form class="form" id="form">
           <p class="form__text">AJOUTER UN MEMBRE DE LA FAMILLE</p>
 
-            <label class="form__first-name" for="first-name">Prénom<br>
-            <input type="text" placeholder="Santos"></label>
+            <div class="form__name">
+              <label class="first-name" for="first-name">Prénom<br>
+              <input type="text" placeholder="Santos"></label>
 
-            <label class="form__last-name" for="last-name">Nom<br>
-            <input type="text" placeholder="Anna"></label>
+              <label class="last-name" for="last-name">Nom<br>
+             <input type="text" placeholder="Anna"></label>
+            </div>
 
             <label class="form__gender" for="gender">
                 <input type="checkbox" name="homme" id="homme"><label for="homme">Homme</label>
@@ -204,8 +224,9 @@
             <label class="form__birth-date" for="birth-date">Date de naissance<br>
             <input type="date"></label>
 
-            <label class="form__country" for="country">Adresse postale<br>
-            <select name="pays">
+            <div class="form__county">
+              <label class="country" for="country">Adresse postale<br>
+                  <select name="pays">
 <option value="Afghanistan">Afghanistan</option>
 <option value="Afrique_du_Sud">Afrique du Sud</option>
 <option value="Albanie">Albanie</option>
@@ -399,26 +420,37 @@
 <option value="Zaire">Zaïre</option>
 <option value="Zambie">Zambie</option>
 <option value="Zimbabwe">Zimbabwe</option>
-            </select>
-            </label>
+                  </select>
+              </label>
 
-            <label clas="form__zip-code" for="zip-code"><br>
-            <input type="text" placeholder="Code Postal"></label>
+              <label class="zip-code" for="zip-code"><br>
+                <input type="text" placeholder="Code Postal">
+              </label>
+            </div>
 
-            <label class="form__adress" for="adress">
-               <input type="text" placeholder="Adresse">
-            </label>
+            <div class="form__adress">
+              <label class="adress" for="adress">
+                <input type="text" placeholder="Adresse">
+                <img src="assets/icons/house-input.svg">
+              </label>
 
-            <label class="form__city" for="form">
-            <input type="text" placeholder="Ville">
-            </label>
+              <label class="city" for="form">
+                <input type="text" placeholder="Ville">
+              </label>
+            </div>
 
-            <label class="form__email" for="email">Email personnel<br>
-            <input type="email">
-            </label>
+            <div class="form__contact">
+              <label class="email" for="email">Email personnel<br>
+                <input type="email">
+                <img src="assets/icons/email.svg">
+              </label>
 
-            <label class="form__telephone" for="telephone">Numero de téléphone*<br>
-            <input type="tel"></label>
+              <label class="telephone" for="telephone">
+                Numero de téléphone*<br>
+                <input type="tel">
+                <img src="assets/icons/phone.svg">
+              </label>
+            </div>
 
             <label class="form__submit-btn" for="submit-btn">
             <input type="submit" value="AJOUTER UNE PERSONNE">
@@ -428,6 +460,7 @@
         </div>
     </main>
     </div>
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/script.js">
+    </script>
   </body>
 </html>
