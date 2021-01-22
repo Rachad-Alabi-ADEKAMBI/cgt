@@ -20,6 +20,9 @@
     <!--header-->
     <header class="header">
       <div class="header__details">
+
+        <div class="header__details__left-bar"></div>
+
         <div class="header__details__logo">
           <img src="" />
         </div>
@@ -62,7 +65,6 @@
       <ul class="aside__up-menu">
         <li class="aside__up-menu__link">
           <a href="#">
-            <div class="bar"></div>
             <img src="assets/icons/personal-info.svg">
             <p>
               INFORMATIONS PERSONNELLES
@@ -73,7 +75,8 @@
         <li class="aside__up-menu__link">
           <a href="#" class="menu__link">
             <div class="bar-active"></div>
-            <img src="assets/icons/family-members-selected.svg">
+            <img src="assets/icons/family-members-selected.svg" 
+            class="active-img">
             <p class="active-link">
               AYANTS-DROITS
             </p>
@@ -82,7 +85,6 @@
 
         <li class="aside__up-menu__link">
           <a href="#" class="menu__link">
-            <div class="bar"></div>
             <img src="assets/icons/reservations2.svg">
             <p>
               RESERVATIONS
@@ -92,7 +94,6 @@
 
         <li class="aside__up-menu__link">
           <a href="#" class="menu__link">
-            <div class="bar"></div>
             <img src="assets/icons/star.svg">
             <p>
                OFFRES SAUVEGARDEES
@@ -102,7 +103,6 @@
 
          <li class="aside__up-menu__link">
           <a href="#" class="menu__link">
-            <div class="bar"></div>
             <img src="assets/icons/saved-search.svg">
             <p>
               RECHERCHES PRECEDENTES
@@ -124,13 +124,18 @@
           </a>
         </li>
       </ul>
+
+      <p class="dot-menu" > <a href="#">...</a></p>
     </aside>
     <!--aside-menu end-->
 
     <main class="main">
       <!--menu mobile-->
       <div class="menu-mobile">
-        <img src="" class="menu__mobile__icon">
+        <div class="ham-menu">
+        <img src="assets/icons/hamburger-menu.svg" 
+        id="menu__mobile__icon">
+        </div>
 
         <ul class="main__menu" id="main__menu">
             <li><a href="#" class="main__menu__link" >
@@ -149,18 +154,18 @@
             </li>
         </ul>
 
-        <h2 class="main__title">Ayants-droits</h2>
+        <h1 class="main__title" id="main__title">Ayants-droits</h1>
       </div>
       <!--menu mobile end-->
 
     <!--section -->
-        <h3 class="main__section-type">
+        <h2 class="main__section-type">
             CONJOINT.E
-        </h3>
+        </h2>
         <section class="main__section">
           <div class="main__section__name">Martin Philippe</div>
 
-          <button class="main__section__edit edit_btn" id="edit1"><img src="assets/icons/edit.svg"> EDITER</button>
+          <button class="main__section__edit" onclick="document.getElementById('form').style.display='flex';"><img src="assets/icons/edit.svg"> EDITER</button>
           
           <div class="main__section__birth-date"><img src="assets/icons/calendar-yellow.svg"><p>12 Dec 1986</p></div>
 
@@ -169,12 +174,12 @@
           <div class="main__section__adress"><img src="assets/icons/house-yellow.svg"> <p>France, Paris, 24 Rue du Commandant Guilbaud,77003</p></div>
         </section>
 
-        <h3 class="main__section-type">ENFANTS</h3>
+        <h2 class="main__section-type">ENFANTS</h2>
         
         <section class="main__section">
           <p class="main__section__name">ELise</p>
 
-          <button class="main__section__edit btn" id="edit2"><img src="assets/icons/edit.svg"> EDITER</button>
+          <button class="main__section__edit btn" onclick="document.getElementById('form').style.display='flex';"><img src="assets/icons/edit.svg"> EDITER</button>
           
           <div class="main__section__birth-date"><img src="assets/icons/calendar-yellow.svg"><p>17 Oct 2009</p></div>
 
@@ -184,14 +189,14 @@
         <section class="main__section">
           <div class="main__section__name">Robert Jr. Harris</div>
 
-          <button class="main__section__edit edit_btn"><img src="assets/icons/edit.svg"> EDITER</button>
+          <button class="main__section__edit" onclick="document.getElementById('form').style.display='flex';"><img src="assets/icons/edit.svg"> EDITER</button>
           
           <div class="main__section__birth-date"><img src="assets/icons/calendar-yellow.svg"><p>30 Jan 2015</p></div>
 
           <div class="main__section__adress"><img src="assets/icons/house-yellow.svg"><p>France, Paris, 24 Rue du Commandant Guilbaud,77003</p></div>
         </section>
         
-        <div class="main__edit edit_btn" onclick="document.getElementById('form').style.display='block';">
+        <div class="main__edit edit_btn" onclick="document.getElementById('form').style.display='flex';">
             <img src="assets/icons/plus_3.svg">
             <p>AJOUTER UNE PERSONNE</p>
         </div>
@@ -203,18 +208,27 @@
 
             <div class="form__name">
               <label class="first-name" for="first-name">Prénom<br>
-              <input type="text" placeholder="Santos"></label>
+              <input type="text" placeholder="">  </label>
 
               <label class="last-name" for="last-name">Nom<br>
-             <input type="text" placeholder="Anna"></label>
+             <input type="text" placeholder=""></label>
             </div>
 
-            <label class="form__gender" for="gender">
-                <input type="checkbox" name="homme" id="homme"><label for="homme">Homme</label>
-                <input type="checkbox" name="femme" id="femme"><label for="femme">Femme</label><br>
-            </label>
+            <div class="form__gender">
+                <label class="man"> 
+                  <input type="radio" name="homme" value="homme"
+                   id="homme" for="homme">Homme
+                   <img src="assets/icons/radio-unselected.svg">
+              </label>
 
-            <label class="form__relative-type" for="relative-type">Filiation<br>
+                <label class="woman">
+                  <input type="radio" name="femme" id="femme"  value="femme"
+                  for="femme">Femme
+                  <img src="assets/icons/radio-selected.svg">
+                </label>
+            </div>
+
+            <label class="relative-type" for="relative-type">Filiation<br>
             <select name="relative" id="relative">
                 <option value="Enfant">Enfant</option>
                 <option value="Autres">Autres</option>
@@ -222,9 +236,11 @@
             </label>
 
             <label class="form__birth-date" for="birth-date">Date de naissance<br>
-            <input type="date"></label>
+              <input type="text">
+              <img src="assets/icons/calendar.svg">
+            </label>
 
-            <div class="form__county">
+            <div class="form__country">
               <label class="country" for="country">Adresse postale<br>
                   <select name="pays">
 <option value="Afghanistan">Afghanistan</option>
