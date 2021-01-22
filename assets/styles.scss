@@ -68,10 +68,14 @@ ul li {
     }
 
     &__logo {
-      width: 77px;
       margin: auto 5px auto 30px;
-      background-color: red;
       height: 100px;
+
+      img {
+        width: 77px;
+        height: 100px;
+        margin: auto;
+      }
     }
 
     &__infos {
@@ -135,7 +139,6 @@ ul li {
         color: white;
         width: 100%;
         font-weight: normal;
-        font-size: normal;
       }
 
       .title {
@@ -292,7 +295,7 @@ ul li {
         }
       }
 
-      h2 {
+      .main__title {
         font-family: "Athelas", sans-serif;
         margin: 30px auto auto 0;
         font-stretch: normal;
@@ -407,9 +410,8 @@ ul li {
         p {
           display: table-cell;
           vertical-align: middle;
-          font-family: "Roboto Regular";
-          width: 109px;
-
+          font-family: "Roboto Regular", arial;
+          width: 100%;
           height: 30px;
           margin: 17px 89px 2px 0;
           font-size: 14px;
@@ -716,6 +718,7 @@ ul li {
         .telephone {
           position: relative;
           margin: auto;
+
           input {
             width: 310px;
             padding-left: 40px;
@@ -772,8 +775,10 @@ ul li {
       }
 
       &__logo {
-        margin: auto 0;
-        width: 77px;
+        margin-left: 0;
+        img {
+          height: 100px;
+        }
       }
 
       &__infos {
@@ -888,10 +893,12 @@ ul li {
     &__details {
       background-color: $black-blue;
       &__left-bar {
-        width: 0px;
+        background-color: black;
+        margin-right: 0;
       }
+
       &__logo {
-        width: 77px;
+        margin-left: 0;
       }
 
       &__infos {
@@ -997,9 +1004,13 @@ ul li {
       }
 
       &__logo {
-        width: 50px;
         height: 60px;
+        width: 46px;
         margin-left: 0;
+        img {
+          width: 46px;
+          height: 60px;
+        }
       }
 
       &__infos {
