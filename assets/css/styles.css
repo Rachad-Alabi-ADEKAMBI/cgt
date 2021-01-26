@@ -79,8 +79,8 @@ ul li {
 .header__details__infos {
   color: #ffcf03;
   font-weight: bold;
-  font-size: 1em;
-  margin: 26px 0 9px 11px;
+  font-size: 0.9em;
+  margin: 60px 0 9px 11px;
   width: 170px;
 }
 
@@ -310,10 +310,10 @@ ul li {
 }
 
 .container .main__section-type {
-  margin: 30px auto 10px 25px;
+  margin: 30px auto 5px 30px;
   width: 59px;
   height: 19px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -336,7 +336,7 @@ ul li {
 
 .container .main__section__name {
   grid-area: relative-name;
-  margin: auto 10px;
+  margin: auto 20px;
   width: 124px;
   height: 23px;
   font-family: "Athelas";
@@ -372,7 +372,7 @@ ul li {
 .container .main__section__birth-date {
   grid-area: birth-date;
   display: table;
-  margin: auto auto 0 0;
+  margin: auto auto 0 10px;
 }
 
 .container .main__section__birth-date img {
@@ -484,6 +484,7 @@ ul li {
   color: rgba(0, 0, 0, 0.3);
   display: none;
   flex-direction: column;
+  display: none;
   justify-content: space-between;
 }
 
@@ -510,7 +511,7 @@ ul li {
 
 .container .main .form__name .first-name {
   height: 14px;
-  margin: 0 auto 10px 0;
+  margin: 0 0 auto 0;
 }
 
 .container .main .form__name .first-name input {
@@ -519,8 +520,21 @@ ul li {
   padding-left: 20px;
 }
 
+.container .main .form__name .first-name p {
+  height: 14px;
+  font-family: "Roboto Regular", arial;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(9, 36, 60, 0.5);
+  margin-bottom: 5px;
+}
+
 .container .main .form__name .last-name {
-  margin: auto auto auto 10px;
+  margin: auto auto auto 20px;
 }
 
 .container .main .form__name .last-name input {
@@ -529,53 +543,135 @@ ul li {
   padding-left: 20px;
 }
 
-.container .main .form__gender {
+.container .main .form__name .last-name p {
+  height: 14px;
+  font-family: "Roboto Regular", arial;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(9, 36, 60, 0.5);
+  margin-bottom: 5px;
+}
+
+.container .main .form .form__gender {
   grid-area: gender;
   display: flex;
   flex-direction: row;
-  margin: 15px auto auto 0;
+  margin: 10px auto 10px 0;
+  /* Radio Button CSS*/
+  /*----------------hungtq added--------------*/
 }
 
-.container .main .form__gender .man {
-  display: table;
+.container .main .form .form__gender label {
+  display: inline;
+}
+
+.container .main .form .form__gender .radio-1 {
+  width: 193px;
+}
+
+.container .main .form .form__gender .button-holder {
+  float: left;
+  margin-left: 6px;
+  margin-top: 16px;
+}
+
+.container .main .form .form__gender .regular-radio {
+  display: none;
+}
+
+.container .main .form .form__gender .regular-radio + label {
+  background-color: #fafafa;
+  border: 2px solid #cacece;
+  border-radius: 50px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 -15px 10px -12px white(0, 0, 0, 0.05) inset;
+  display: inline-block;
+  padding: 11px;
+  position: relative;
+}
+
+.container .main .form .form__gender .regular-radio:checked + label:after {
+  background: none repeat scroll 0 0 black;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
+  content: " ";
+  font-size: 36px;
+  height: 8px;
+  left: 7px;
+  position: absolute;
+  top: 7px;
+  width: 8px;
+}
+
+.container .main .form .form__gender .regular-radio:checked + label {
+  background-color: #ffcf03;
+  border: 2px solid #f6f6f5;
+  color: black;
+  padding: 11px;
+}
+
+.container .main .form .form__gender .regular-radio + label:active,
+.container .main .form .form__gender .regular-radio:checked + label:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+.container .main .form .form__gender .regular-radio + label:before {
+  background: none repeat scroll 0 0 white;
+  border-radius: 50px;
+  box-shadow: 0 0 10px white(0, 0, 0, 0.3) inset;
+  content: " ";
+  font-size: 36px;
+  height: 8px;
+  left: 7px;
+  position: absolute;
+  top: 7px;
+  width: 8px;
+}
+
+.container .main .form .form__gender .button-holder {
+  display: flex;
   flex-direction: row;
-  padding-right: 30px;
-  position: relative;
+  justify-content: space-between;
+  margin-left: 0;
 }
 
-.container .main .form__gender .man input {
-  display: table-cell;
-  vertical-align: middle;
-  margin: auto 20px auto 10px;
+.container .main .form .form__gender input {
+  margin-right: 15px;
 }
 
-.container .main .form__gender .man img {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  margin-right: 30px;
-}
-
-.container .main .form__gender .woman {
-  display: table;
-  position: relative;
-  margin-left: 10px;
-}
-
-.container .main .form__gender .woman input {
-  display: table-cell;
-  vertical-align: middle;
+.container .main .form .form__gender p {
+  width: 68px;
+  height: 20px;
   margin: auto 30px auto 5px;
-}
-
-.container .main .form__gender .woman img {
-  position: absolute;
-  top: 5px;
-  left: 0;
+  font-family: "Roboto Regular", arial;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.3px;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .container .main .form .relative-type {
   margin: 10px auto auto 0;
+}
+
+.container .main .form .relative-type p {
+  margin-bottom: 5px;
+  width: 100%;
+  height: 14px;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(9, 36, 60, 0.5);
+  font-family: "Roboto Regular", arial;
 }
 
 .container .main .form .relative-type select {
@@ -591,6 +687,12 @@ ul li {
   letter-spacing: 0.3px;
   color: #000000;
   padding-left: 10px;
+  position: relative;
+}
+
+.container .main .form .relative-type img {
+  position: absolute;
+  margin: 10px 0 auto 0;
 }
 
 .container .main .form__birth-date {
@@ -598,9 +700,23 @@ ul li {
   position: relative;
 }
 
+.container .main .form__birth-date p {
+  width: 100%;
+  height: 14px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-family: "Roboto Regular", arial;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(9, 36, 60, 0.5);
+}
+
 .container .main .form__birth-date input {
   width: 300px;
-  padding-left: 50px;
+  padding-left: 40px;
   font-family: "Roboto Regular", arial;
   font-size: 16px;
   font-weight: normal;
@@ -611,8 +727,10 @@ ul li {
 }
 
 .container .main .form__birth-date img {
-  top: 25px;
-  left: 0;
+  width: 20px;
+  height: 20px;
+  margin: 10px 10px auto auto;
+  object-fit: contain;
   position: absolute;
 }
 
@@ -625,6 +743,20 @@ ul li {
 
 .container .main .form .form__country .country {
   margin-right: 10px;
+}
+
+.container .main .form .form__country .country p {
+  width: 100%;
+  height: 14px;
+  margin-bottom: 5px;
+  font-family: "Roboto Regular", arial;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(9, 36, 60, 0.5);
 }
 
 .container .main .form .form__country .country select {
@@ -700,6 +832,20 @@ ul li {
   position: relative;
 }
 
+.container .main .form__contact .email p {
+  margin-bottom: 5px;
+  width: 100%;
+  height: 14px;
+  font-family: "Roboto Regular", arial;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(9, 36, 60, 0.5);
+}
+
 .container .main .form__contact .email input {
   width: 310px;
   padding-left: 40px;
@@ -722,6 +868,20 @@ ul li {
 .container .main .form__contact .telephone {
   position: relative;
   margin: auto;
+}
+
+.container .main .form__contact .telephone p {
+  width: 100%;
+  height: 14px;
+  margin-bottom: 5px;
+  font-family: "Roboto Regular", arial;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(9, 36, 60, 0.5);
 }
 
 .container .main .form__contact .telephone input {
@@ -782,9 +942,9 @@ ul li {
   }
   .header__details__infos {
     margin: 25px auto;
-    width: 100%;
+    width: 170px;
     height: 65px;
-    margin: 26px 0 9px 11px;
+    margin: 40px 10px 10px 11px;
     font-size: 0.8em;
     font-weight: bold;
     font-stretch: normal;
@@ -934,8 +1094,9 @@ ul li {
 /*media queries for 576px */
 @media screen and (max-width: 799px) {
   body {
-    min-width: 365px;
+    min-width: 300px;
     max-width: 799px;
+    width: 300px;
   }
   .header {
     height: 60px;
@@ -947,7 +1108,7 @@ ul li {
     background-color: #09243c;
   }
   .header__details__left-bar {
-    width: 30px;
+    width: 15px;
     height: 60px;
     background-color: black;
   }
@@ -967,7 +1128,7 @@ ul li {
     font-stretch: normal;
     font-style: normal;
     letter-spacing: 1.33px;
-    margin: 20px auto auto 10px;
+    margin: 20px auto auto 5px;
   }
   .header ul {
     display: none;
@@ -1131,7 +1292,7 @@ ul li {
   .header__details__infos {
     width: 100%;
     height: 65px;
-    margin: 26px 0 9px 11px;
+    margin: 30px 0 0px 11px;
     font-size: 0.9em;
     font-weight: bold;
     font-stretch: normal;

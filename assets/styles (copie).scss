@@ -68,17 +68,21 @@ ul li {
     }
 
     &__logo {
-      width: 77px;
       margin: auto 5px auto 30px;
-      background-color: red;
       height: 100px;
+
+      img {
+        width: 77px;
+        height: 100px;
+        margin: auto;
+      }
     }
 
     &__infos {
       color: $brand-yellow;
       font-weight: bold;
-      font-size: 1em;
-      margin: 26px 0 9px 11px;
+      font-size: 0.9em;
+      margin: 60px 0 9px 11px;
       width: 170px;
     }
   }
@@ -135,7 +139,6 @@ ul li {
         color: white;
         width: 100%;
         font-weight: normal;
-        font-size: normal;
       }
 
       .title {
@@ -292,7 +295,7 @@ ul li {
         }
       }
 
-      h2 {
+      .main__title {
         font-family: "Athelas", sans-serif;
         margin: 30px auto auto 0;
         font-stretch: normal;
@@ -306,10 +309,10 @@ ul li {
     }
 
     &__section-type {
-      margin: 30px auto 10px 25px;
+      margin: 30px auto 5px 30px;
       width: 59px;
       height: 19px;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: bold;
       font-stretch: normal;
       font-style: normal;
@@ -334,7 +337,7 @@ ul li {
 
       &__name {
         grid-area: relative-name;
-        margin: auto 10px;
+        margin: auto 20px;
         width: 124px;
         height: 23px;
         font-family: "Athelas";
@@ -370,7 +373,7 @@ ul li {
       &__birth-date {
         grid-area: birth-date;
         display: table;
-        margin: auto auto 0 0;
+        margin: auto auto 0 10px;
 
         img {
           display: table-cell;
@@ -407,9 +410,8 @@ ul li {
         p {
           display: table-cell;
           vertical-align: middle;
-          font-family: "Roboto Regular";
-          width: 109px;
-
+          font-family: "Roboto Regular", arial;
+          width: 100%;
           height: 30px;
           margin: 17px 89px 2px 0;
           font-size: 14px;
@@ -483,8 +485,9 @@ ul li {
       width: auto;
       font-family: "Roboto Regular", arial;
       color: $color-grey;
-      display: flex;
+      display: none;
       flex-direction: column;
+      display: flex;
       justify-content: space-between;
 
       &__text {
@@ -505,81 +508,168 @@ ul li {
       &__name {
         display: flex;
         flex-direction: row;
+        width: 750px;
 
         .first-name {
-          width: 42px;
           height: 14px;
-          margin: 0 287px 10px 1px;
+          margin: 0 0 auto 0;
 
           input {
             width: 330px;
-            margin: auto 21px auto auto;
             font-family: "Roboto Regular", arial;
-
             padding-left: 20px;
+          }
+
+          p {
+            height: 14px;
+            font-family: "Roboto Regular", arial;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: rgba(9, 36, 60, 0.5);
+            margin-bottom: 5px;
           }
         }
 
         .last-name {
-          margin: auto 40px;
+          margin: auto auto auto 20px;
 
           input {
             width: 330px;
-            margin: auto 0;
             font-family: "Roboto Regular", arial;
             padding-left: 20px;
+          }
+
+          p {
+            height: 14px;
+            font-family: "Roboto Regular", arial;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: rgba(9, 36, 60, 0.5);
+            margin-bottom: 5px;
           }
         }
       }
 
-      &__gender {
+      .form__gender {
         grid-area: gender;
         display: flex;
         flex-direction: row;
-        margin: 15px auto auto 0;
-
-        .man {
-          display: table;
-          flex-direction: row;
-          padding-right: 30px;
+        margin: 10px auto 10px 0;
+        /* Radio Button CSS*/
+        label {
+          display: inline;
+        }
+        .radio-1 {
+          width: 193px;
+        }
+        .button-holder {
+          float: left;
+          margin-left: 6px;
+          margin-top: 16px;
+        }
+        .regular-radio {
+          display: none;
+        }
+        .regular-radio + label {
+          background-color: #fafafa;
+          border: 2px solid #cacece;
+          border-radius: 50px;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+            0 -15px 10px -12px white(0, 0, 0, 0.05) inset;
+          display: inline-block;
+          padding: 11px;
           position: relative;
-
-          input {
-            display: table-cell;
-            vertical-align: middle;
-            margin: auto 20px auto 10px;
-          }
-
-          img {
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            margin-right: 30px;
-          }
+        }
+        .regular-radio:checked + label:after {
+          background: none repeat scroll 0 0 black;
+          border-radius: 50px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
+          content: " ";
+          font-size: 36px;
+          height: 8px;
+          left: 7px;
+          position: absolute;
+          top: 7px;
+          width: 8px;
         }
 
-        .woman {
-          display: table;
-          position: relative;
-          margin-left: 10px;
+        .regular-radio:checked + label {
+          background-color: #ffcf03;
+          border: 2px solid #f6f6f5;
+          color: #99a1a7;
+          padding: 11px;
+        }
+        .regular-radio + label:active,
+        .regular-radio:checked + label:active {
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+            0 1px 3px rgba(0, 0, 0, 0.1) inset;
+        }
 
-          input {
-            display: table-cell;
-            vertical-align: middle;
-            margin: auto 30px auto 5px;
-          }
+        /*----------------hungtq added--------------*/
+        .regular-radio + label:before {
+          background: none repeat scroll 0 0 white;
+          border-radius: 50px;
+          box-shadow: 0 0 10px white(0, 0, 0, 0.3) inset;
+          content: " ";
+          font-size: 36px;
+          height: 8px;
+          left: 7px;
+          position: absolute;
+          top: 7px;
+          width: 8px;
+        }
 
-          img {
-            position: absolute;
-            top: 5px;
-            left: 0;
-          }
+        .button-holder {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-left: 0;
+        }
+
+        input {
+          margin-right: 15px;
+        }
+
+        p {
+          width: 68px;
+          height: 20px;
+          margin: auto 5px;
+          font-family: "Roboto Regular", arial;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: 0.3px;
+          color: rgba(0, 0, 0, 0.3);
         }
       }
 
       .relative-type {
         margin: 10px auto auto 0;
+        position: relative;
 
+        p {
+          margin-bottom: 5px;
+          width: 100%;
+          height: 14px;
+          font-size: 12px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: rgba(9, 36, 60, 0.5);
+          font-family: "Roboto Regular", arial;
+        }
         select {
           width: 300px;
           height: 50px;
@@ -593,12 +683,31 @@ ul li {
           letter-spacing: 0.3px;
           color: #000000;
           padding-left: 10px;
+
+          img {
+            position: absolute;
+            margin-right: 15px;
+          }
         }
       }
 
       &__birth-date {
         margin: 20px auto auto 0;
         position: relative;
+
+        p {
+          width: 100%;
+          height: 14px;
+          margin-bottom: 5px;
+          font-size: 12px;
+          font-family: "Roboto Regular", arial;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: rgba(9, 36, 60, 0.5);
+        }
         input {
           width: 300px;
           padding-left: 50px;
@@ -626,6 +735,21 @@ ul li {
 
         .country {
           margin-right: 10px;
+
+          p {
+            width: 100%;
+            height: 14px;
+            margin-bottom: 5px;
+            font-family: "Roboto Regular", arial;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: rgba(9, 36, 60, 0.5);
+          }
+
           select {
             height: 50px;
             width: 220px;
@@ -696,6 +820,21 @@ ul li {
         .email {
           margin: auto 21px auto auto;
           position: relative;
+
+          p {
+            margin-bottom: 5px;
+            width: 100%;
+            height: 14px;
+            font-family: "Roboto Regular", arial;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: rgba(9, 36, 60, 0.5);
+          }
+
           input {
             width: 310px;
             padding-left: 40px;
@@ -719,6 +858,21 @@ ul li {
         .telephone {
           position: relative;
           margin: auto;
+
+          p {
+            width: 100%;
+            height: 14px;
+            margin-bottom: 5px;
+            font-family: "Roboto Regular", arial;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: rgba(9, 36, 60, 0.5);
+          }
+
           input {
             width: 310px;
             padding-left: 40px;
@@ -775,15 +929,17 @@ ul li {
       }
 
       &__logo {
-        margin: auto 0;
-        width: 77px;
+        margin-left: 0;
+        img {
+          height: 100px;
+        }
       }
 
       &__infos {
         margin: 25px auto;
-        width: 100%;
+        width: 170px;
         height: 65px;
-        margin: 26px 0 9px 11px;
+        margin: 40px 10px 11px;
         font-size: 0.8em;
         font-weight: bold;
         font-stretch: normal;
@@ -891,10 +1047,12 @@ ul li {
     &__details {
       background-color: $black-blue;
       &__left-bar {
-        width: 0px;
+        background-color: black;
+        margin-right: 0;
       }
+
       &__logo {
-        width: 77px;
+        margin-left: 0;
       }
 
       &__infos {
@@ -980,8 +1138,9 @@ ul li {
 /*media queries for 576px */
 @media screen and (max-width: 799px) {
   body {
-    min-width: 365px;
+    min-width: 300px;
     max-width: 799px;
+    width: 300px;
   }
 
   .header {
@@ -994,15 +1153,19 @@ ul li {
       background-color: $black-blue;
 
       &__left-bar {
-        width: 30px;
+        width: 15px;
         height: 60px;
         background-color: black;
       }
 
       &__logo {
-        width: 50px;
         height: 60px;
+        width: 46px;
         margin-left: 0;
+        img {
+          width: 46px;
+          height: 60px;
+        }
       }
 
       &__infos {
@@ -1012,7 +1175,7 @@ ul li {
         font-stretch: normal;
         font-style: normal;
         letter-spacing: 1.33px;
-        margin: 20px auto auto 10px;
+        margin: 20px auto auto 5px;
       }
     }
 
@@ -1051,11 +1214,12 @@ ul li {
 
         .main__menu {
           display: none;
+          margin-right: 20px;
         }
 
         .main__title {
           height: 27px;
-          margin: 20px auto auto auto;
+          margin: auto 10px;
           font-family: "Athelas", arial;
           font-size: 24px;
           font-weight: normal;
@@ -1100,9 +1264,17 @@ ul li {
       }
 
       .form {
+        margin: 50px 0 50px 10px;
         width: auto;
-
+        &__text {
+          margin-left: 10px;
+        }
         &__name {
+          margin-left: 0;
+          display: flex;
+          justify-content: space-between;
+          width: 330px;
+
           .first-name {
             margin-right: 10px;
 
@@ -1112,7 +1284,7 @@ ul li {
           }
 
           .last-name {
-            margin-left: auto;
+            margin-left: 0;
 
             input {
               width: 150px;
@@ -1132,7 +1304,7 @@ ul li {
           }
         }
 
-        .form-country {
+        .form__country {
           .country {
             select {
               width: 150px;
@@ -1147,8 +1319,10 @@ ul li {
         }
 
         &__adress {
+          margin-left: 0;
           display: flex;
           flex-direction: column;
+          margin: 10px auto auto 0;
 
           .adress {
             input {
@@ -1157,7 +1331,7 @@ ul li {
           }
 
           .city {
-            margin-top: 10px;
+            margin: 10px auto auto 0;
             input {
               width: 140px;
             }
@@ -1178,6 +1352,7 @@ ul li {
           }
 
           .telephone {
+            margin: auto 0;
             input {
               width: 300px;
             }
@@ -1186,7 +1361,8 @@ ul li {
 
         &__submit-btn {
           input {
-            width: 300px;
+            width: 340px;
+            margin: auto;
           }
         }
       }
@@ -1216,7 +1392,7 @@ ul li {
       &__infos {
         width: 100%;
         height: 65px;
-        margin: 26px 0 9px 11px;
+        margin: 30px 0 0px 11px;
         font-size: 0.9em;
         font-weight: bold;
         font-stretch: normal;

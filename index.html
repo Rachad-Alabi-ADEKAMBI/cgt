@@ -34,9 +34,9 @@
         </div>
 
         <h1 class="header__details__infos">
-          VACANCES, CULTURE,<br />
-          SPORTS ET LOISIRS POUR<br />
-          LES SYNDIQUÉS DE LA CGT
+          VACANCES, CULTURE, <br />
+          ET LOISIRS POUR <br />
+          SYNDIQUÉS DE LA CGT
         </h1>
       </div>
 
@@ -179,12 +179,12 @@
             <li><a href="#" class="main__menu__link"> Ayants-droits </a></li>
           </ul>
 
-          <h1 class="main__title" id="main__title">Ayants-droits</h1>
+          <h2 class="main__title" id="main__title">Ayants-droits</h2>
         </div>
         <!--menu mobile end-->
 
         <!--section -->
-        <h2 class="main__section-type">CONJOINT.E</h2>
+        <h3 class="main__section-type">CONJOINT.E</h3>
         <section class="main__section">
           <div class="main__section__name">Martin Philippe</div>
 
@@ -211,7 +211,7 @@
           </div>
         </section>
 
-        <h2 class="main__section-type">ENFANTS</h2>
+        <h3 class="main__section-type">ENFANTS</h3>
 
         <section class="main__section">
           <p class="main__section__name">ELise</p>
@@ -270,37 +270,57 @@
 
           <div class="form__name">
             <label class="first-name" for="form-first-name"
-              >Prénom<br />
+              ><p>Prénom</p>
               <input type="text" placeholder="" id="form-first-name" />
             </label>
 
             <label class="last-name" for="form-last-name"
-              >Nom<br />
-              <input type="text" placeholder="" id="form-last-name"
+              ><p>Nom</p>
+              <input type="text" placeholder="" id="form-las  t-name"
             /></label>
           </div>
 
           <div class="form__gender">
-            
+            <div class="button-holder">
+              <input
+                type="radio"
+                checked=""
+                class="regular-radio"
+                name="radio-1-set"
+                id="radio-1-set"
+              /><label for="radio-1-set" class="label-man"></label>
+              <p>Homme</p>
+
+              <input
+                type="radio"
+                checked=""
+                class="regular-radio"
+                name="radio-1-set"
+                id="radio-2-set"
+              /><label for="radio-2-set"></label>
+              <p>Femme</p>
+            </div>
           </div>
 
           <label class="relative-type" for="form-relative-type"
-            >Filiation<br />
+            ><p>Filiation</p>
+
             <select name="relative" id="form-relative-type">
               <option value="Enfant">Enfant</option>
               <option value="Autres">Autres</option>
+              <img src="assets/icons/down.svg" />
             </select>
           </label>
 
           <label class="form__birth-date" for="form-birth-date"
-            >Date de naissance<br />
-            <input type="text" id="form-birth-date" />
-            <img src="assets/icons/calendar.svg" alt="icone de la CGT" />
+            ><p>Date de naissance</p>
+            <input type="date" id="form-birth-date" value="jj/mm/aaaa" />
           </label>
 
           <div class="form__country">
             <label class="country" for="form-country"
-              >Adresse postale<br />
+              ><p>Adresse postale</p>
+
               <select name="pays" id="form-country">
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Afrique_du_Sud">Afrique du Sud</option>
@@ -529,13 +549,13 @@
 
           <div class="form__contact">
             <label class="email" for="form-email"
-              >Email personnel<br />
+              ><p>Email personnel</p>
               <input type="email" id="form-email" />
               <img src="assets/icons/email.svg" alt="icone de la CGT" />
             </label>
 
             <label class="telephone" for="form-telephone">
-              Numero de téléphone*<br />
+              <p>Numero de téléphone*</p>
               <input type="tel" id="form-telephone" />
               <img src="assets/icons/phone.svg" alt="icone de la CGT" />
             </label>
