@@ -808,6 +808,7 @@ ul li {
             width: 160px;
             font-family: "Roboto Regular", arial;
             padding-left: 10px;
+            margin-top: 5px;
           }
         }
       }
@@ -1352,6 +1353,10 @@ ul li {
         .relative-type {
           select {
             width: 140px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline: none;
           }
         }
 
@@ -1365,6 +1370,10 @@ ul li {
           .country {
             select {
               width: 150px;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              outline: none;
             }
           }
 

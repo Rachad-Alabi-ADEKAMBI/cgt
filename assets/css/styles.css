@@ -813,6 +813,7 @@ ul li {
   width: 160px;
   font-family: "Roboto Regular", arial;
   padding-left: 10px;
+  margin-top: 5px;
 }
 
 .container .main .form__adress {
@@ -1270,12 +1271,16 @@ ul li {
   }
   .container .main .form .relative-type select {
     width: 140px;
+    appearance: none;
+    outline: none;
   }
   .container .main .form__birth-date input {
     width: 140px;
   }
   .container .main .form .form__country .country select {
     width: 150px;
+    appearance: none;
+    outline: none;
   }
   .container .main .form .form__country .zip-code input {
     width: 90px;
