@@ -276,7 +276,7 @@
 
             <label class="last-name" for="form-last-name"
               ><p>Nom</p>
-              <input type="text" placeholder="" id="form-las  t-name"
+              <input type="text" placeholder="" id="form-last-name"
             /></label>
           </div>
 
@@ -305,16 +305,17 @@
           <label class="relative-type" for="form-relative-type"
             ><p>Filiation</p>
 
-            <select name="relative" id="form-relative-type">
+            <select name="relative" class="size-box" id="form-relative-type">
               <option value="Enfant">Enfant</option>
               <option value="Autres">Autres</option>
-              <img src="assets/icons/down.svg" />
             </select>
+            <img src="assets/icons/down.svg" />
           </label>
 
           <label class="form__birth-date" for="form-birth-date"
             ><p>Date de naissance</p>
-            <input type="date" id="form-birth-date" value="jj/mm/aaaa" />
+            <input type="date" id="form-birth-date" class="unstyled" />
+            <img src="assets/icons/calendar.svg" />
           </label>
 
           <div class="form__country">
@@ -528,6 +529,7 @@
                 <option value="Zambie">Zambie</option>
                 <option value="Zimbabwe">Zimbabwe</option>
               </select>
+              <img src="assets/icons/down.svg" />
             </label>
 
             <label class="zip-code" for="form-zip-code"

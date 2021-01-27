@@ -604,8 +604,12 @@ ul li {
         .regular-radio:checked + label {
           background-color: #ffcf03;
           border: 2px solid #f6f6f5;
-          color: #99a1a7;
+          color: black;
           padding: 11px;
+        }
+
+        .regular-radio:checked + label + p {
+          color: black;
         }
         .regular-radio + label:active,
         .regular-radio:checked + label:active {
@@ -641,7 +645,7 @@ ul li {
         p {
           width: 68px;
           height: 20px;
-          margin: auto 5px;
+          margin: auto 30px auto 5px;
           font-family: "Roboto Regular", arial;
           font-size: 16px;
           font-weight: normal;
@@ -655,7 +659,6 @@ ul li {
 
       .relative-type {
         margin: 10px auto auto 0;
-        position: relative;
 
         p {
           margin-bottom: 5px;
@@ -682,12 +685,16 @@ ul li {
           line-height: normal;
           letter-spacing: 0.3px;
           color: #000000;
-          padding-left: 10px;
+          padding-left: 40px;
+          position: relative;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none; /* Remove default arrow */
+        }
 
-          img {
-            position: absolute;
-            margin-right: 15px;
-          }
+        img {
+          position: absolute;
+          margin: 15px auto auto -40px;
         }
       }
 
@@ -710,7 +717,7 @@ ul li {
         }
         input {
           width: 300px;
-          padding-left: 50px;
+          padding-left: 40px;
           font-family: "Roboto Regular", arial;
           font-size: 16px;
           font-weight: normal;
@@ -718,11 +725,14 @@ ul li {
           font-style: normal;
           line-height: normal;
           letter-spacing: 0.3px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          position: relative;
         }
 
         img {
-          top: 25px;
-          left: 0;
+          margin: 10px auto auto -30px;
           position: absolute;
         }
       }
@@ -939,7 +949,7 @@ ul li {
         margin: 25px auto;
         width: 170px;
         height: 65px;
-        margin: 40px 10px 11px;
+        margin: 40px 10px 10px 11px;
         font-size: 0.8em;
         font-weight: bold;
         font-stretch: normal;
