@@ -1363,6 +1363,10 @@ ul li {
         &__birth-date {
           input {
             width: 140px;
+            background-color: white;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
           }
         }
 
